@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+    <h1>Title you have entered is already saved.</h1>
+    <h4>{{title}}</h4>
+    <div  style="width: 50%;">
+        <p>
+            {{content}}
+        </p>
+    </div>
+   <!-- <h2>Do you want to replace the content? </h2>
+    <form action=""> <input type="submit" value="Yes"> </form> -->
+{% endblock %}

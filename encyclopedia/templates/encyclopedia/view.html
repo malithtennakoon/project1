@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    {% if entry_available %}
+        {{get_entry|safe}}
+        <form action="edit">
+            <input type="submit" value="Edit" class="btn btn-light" style="margin-top:20px; border:1px solid black;"/>
+        </form>
+    {% else %}
+            <h1>Page <u>{{title}}</u> not Found <sub>(404)</sub></h1>
+            <p>URL that you have typed, cannot be found. Please visit to HOME and select a page</p>
+    {% endif %}
+{% endblock %}
